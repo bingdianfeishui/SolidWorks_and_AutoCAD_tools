@@ -1,0 +1,1 @@
+将calloutformat.txt文件放到"<%Solidworks安装目录>\SolidWorks\lang\chinese-simplified"下覆盖同名文件，请先备份原文件

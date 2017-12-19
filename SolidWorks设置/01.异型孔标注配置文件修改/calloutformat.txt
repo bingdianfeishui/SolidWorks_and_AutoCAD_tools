@@ -1,0 +1,3247 @@
+* (c)2002 SolidWorks Corp.
+* 异型孔向导标注格式定义文件_修改版
+* 创建日期: 2002 年 7 月 4 日
+* 修改日期：2015 年 1 月 6 日
+* 定义符; 根据需要将格式折断为标注行 1; 尺寸文字行 2; 及标注行 3 或以上
+* \ 字符表示标注连续到下一行，* 字符表示评论行
+* 有关编辑的额外评论位于此文件的底部。
+*
+* 修改人：Liy
+*
+*=================================================================================================
+*★将该文件放到Solidworks安装目录"SolidWorks Corp\SolidWorks\lang\chinese-simplified"下覆盖同名文件，请先备份原文件
+*=================================================================================================
+**************************************************************************************************
+**NO-NUMBER-OF-INSTANCES
+**
+[ANSI INCH]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                              沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                                         沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                         锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                                        沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                                         沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                        <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+                                                         锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+                                             沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+                                                      沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                      <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+                                                        沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                        锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+                                                       沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                       锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+                                                       <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			  沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+	                 <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+	                <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+	                 <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+		        锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		      锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+		                锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+		                <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+			    锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			    沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+		                锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+		                沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+		                <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	              <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+	              <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	         <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		<hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+	       <hw-threaddesc><hw-threadclass>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+	               <hw-threaddesc><hw-threadclass>通孔;\
+	               <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+	              <hw-threaddesc><hw-threadclass>通孔;\
+	               <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+	               <hw-threaddesc><hw-threadclass>通孔;\
+	              <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+	               <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	              <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+	       <hw-threaddesc><hw-threadclass>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		      <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+	                         <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		      <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		      <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		     <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		      <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		  <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		          <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+		         <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		          <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	                           <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		         <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		          <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	       <hw-fstsze>NPT
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	                 <hw-fstsze>NPT;\
+		<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	      <hw-fstsze>NPT
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	               <hw-fstsze>NPT;\
+	                <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	                 <hw-fstsze>NPT;\
+		<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	               <hw-fstsze>NPT;\
+	               <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+	                <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>           
+**
+***************************************************************************************************
+[ANSI METRIC]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                              沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+                                                         沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+                                                         锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>           
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>           
+**
+***************************************************************************************************
+[BSI]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>           
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>           
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+**************************************************************************************************
+[DIN]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>      
+CONDUIT-THREAD-INTERNAL=<cthrd-size><cthrd-type>
+CONDUIT-THREAD-EXTERNAL=<cthrd-size><cthrd-type>
+ENSAT-AL-THREAD-INTERNAL=<cthrd-size><cthrd-type>
+ENSAT-CU-THREAD-INTERNAL=<cthrd-size><cthrd-type>
+ENSAT-ST-THREAD-INTERNAL=<cthrd-size><cthrd-type>
+**
+****************************************************************************************************
+[ISO]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>           
+**
+*****************************************************************************************************
+[JIS]
+** 						COUNTERBORED HOLES 						**
+**
+JIS-COUNT-DELIMITER=x
+**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+******************************************************************************************************
+[DME MOLD BASES]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-fstsze>NPT
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-fstsze>NPT;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-fstsze>NPT
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+***************************************************************************************************
+[HASCO METRIC MOLD BASES]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+********************************************************************************************************
+[PCS MOLD BASES]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-fstsze>NPT
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-fstsze>NPT;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-fstsze>NPT
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+***************************************************************************************************
+[PROGRESSIVE MOLD BASES]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-fstsze>NPT
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-fstsze>NPT;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-fstsze>NPT
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+***************************************************************************************************
+[SUPERIOR MOLD BASES]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc><hw-threadclass>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc><hw-threadclass>深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc><hw-threadclass>深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-fstsze>NPT
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-fstsze>NPT;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-fstsze>NPT
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-fstsze>NPT;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+***************************************************************************************************
+[HELICOIL?INCH]
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			        此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+HELICOIL-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+**
+******************************************************************************************************
+[HELICOIL?METRIC]
+**						TAPPED HOLES							**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			    此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			        此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  此项的螺纹孔：<hw-fstsze>HELICOIL<hw-fsttyp>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+HELICOIL-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+**
+****************************************************************************************************
+[GB-OLD]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+****************************************************************************************************
+[GB]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<hw-threaddesc>-6H深<hw-threaddepth>孔深<hw-tapdrldepth>
+*with nearside csink*
+TAP-BLIND(csns)=<hw-threaddesc>-6H深<hw-threaddepth>孔深<hw-tapdrldepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<hw-threaddesc>-6H深<hw-threaddepth>孔深<hw-tapdrldepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<hw-threaddesc>-6H深<hw-threaddepth>孔深<hw-tapdrldepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<hw-threaddesc>-6H深<hw-threaddepth>孔深<hw-tapdrldepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<hw-threaddesc>- 6H 通孔;\
+			<MOD-DIAM><hw-thrutapdrldia>通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<hw-threaddesc>- 6H 通孔;\
+			   <MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<hw-threaddesc>- 6H 通孔;\
+			   <MOD-DIAM><hw-thrutapdrldia>通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<hw-threaddesc>- 6H 通孔;\
+			   <MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<hw-threaddesc>-6H深<hw-threaddepth>;\
+		 <MOD-DIAM><hw-tapdrldia>通孔
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<hw-threaddesc>- 6H 通孔;\
+			<MOD-DIAM><hw-thrutapdrldia>通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <MOD-DIAM><hw-tapdrldia>通孔;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <MOD-DIAM><hw-tapdrldia>通孔
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<hw-threaddesc><hw-threadclass>通孔;\
+                                          <MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <MOD-DIAM><hw-tapdrldia>通孔;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<hw-descrp>;\
+	    <MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>
+*with nearside csink*
+PTAP-BLIND(csns)=<hw-descrp>;\
+	          <MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<hw-descrp>;\
+	   <MOD-DIAM><hw-tapdrldia>通孔
+*with farside csink*
+PTAP-THRU(csfs)=<hw-descrp>;\
+	         <MOD-DIAM><hw-tapdrldia>通孔;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<hw-descrp>;\
+	         <MOD-DIAM><hw-tapdrldia>通孔;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<hw-descrp>;\
+	         <MOD-DIAM><hw-tapdrldia>通孔;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+****************************************************************************************************
+[KS]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+****************************************************************************************************
+[IS]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>           
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>           
+**
+******************************************************************************************************
+[AS]
+** 						COUNTERBORED HOLES 						**
+COUNTERBORE-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with underhead csink*
+COUNTERBORE-BLIND(csms)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>
+*with nearside csink*
+COUNTERBORE-BLIND(csns)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and underhead csinks*
+COUNTERBORE-BLIND(csnm)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+				 沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				 锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+COUNTERBORE-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>
+*with farside countersink*
+COUNTERBORE-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with underhead csink*
+COUNTERBORE-THRU(csms)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with underhead and far csinks*
+COUNTERBORE-THRU(csmf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+COUNTERBORE-THRU(csns)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with near and farside csinks*
+COUNTERBORE-THRU(csnf)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with near and underhead csinks*
+COUNTERBORE-THRU(csnm)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+			    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			     锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>
+*with all 3 csinks*
+COUNTERBORE-THRU(csal)=<MOD-DIAM><hw-thruholedia>通孔;\
+				沉孔<MOD-DIAM><hw-cbdia>深<hw-cbdepth>;\
+				<hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				锥角<MOD-DIAM><hw-midcsdia>X<hw-midcsang>,<hw-msgmidside>;\
+				<hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PLAIN HOLES 						**
+HOLE-BLIND=;<MOD-DIAM><hw-diam>深<hw-depth>
+*with nearside csink*
+HOLE-BLIND(csns)=;<MOD-DIAM><hw-diam>深<hw-depth>;\
+		     <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+HOLE-THRU=;<MOD-DIAM><hw-diam>通孔
+*with farside csink*
+HOLE-THRU(csfs)=;<MOD-DIAM><hw-diam>通孔;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+HOLE-THRU(csns)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+HOLE-THRU(csnf)=;<MOD-DIAM><hw-diam>通孔;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							COUNTERSUNK HOLES 					**
+COUNTERSINK-BLIND=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with added head clearance as cbore*
+COUNTERSINK-BLIND(headclr)=<MOD-DIAM><hw-diam>深<hw-depth>;\
+			  	   锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				   沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+COUNTERSINK-THRU=<MOD-DIAM><hw-thruholedia>通孔;\
+		     锥角<MOD-DIAM><hw-csdia>X<hw-csang>
+*with farside csink*
+COUNTERSINK-THRU(csfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with added head clearance as cbore*
+COUNTERSINK-THRU(headclr)=<MOD-DIAM><hw-thruholedia>通孔;\
+				  锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+				  沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>
+*with head clearance and far side csink*
+COUNTERSINK-THRU(hcfs)=<MOD-DIAM><hw-thruholedia>通孔;\
+			     锥角<MOD-DIAM><hw-csdia>X<hw-csang>;\
+			     沉孔<MOD-DIAM><hw-csdia>深<hw-headclr>;\
+			     <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 								TAPPED HOLES 					**
+TAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	   <hw-threaddesc>-6H深<hw-threaddepth>
+*with nearside csink*
+TAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+		   <hw-threaddesc>-6H深<hw-threaddepth>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*when last hole in hole series*
+TAP-BLIND(series)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread*
+TAP-BLIND(ct)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			<hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-BLIND(ctcsns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*drilled and tapped thru*
+TAP-THRU(tt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with nearside csink*
+TAP-THRU(ttcsns)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with farside csink*
+TAP-THRU(ttcsfs)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with both csinks*
+TAP-THRU(ttcsnf)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			   <hw-threaddesc>- 6H 通孔;\
+			   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*drilled thru but with blind threads*
+TAP-DRILLTHRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+		 <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and drilled and tapped thru*
+TAP-DRILLTHRU(cstt)=<MOD-DIAM><hw-thrutapdrldia>通孔;\
+			<hw-threaddesc>- 6H 通孔
+*with farside csink*
+TAP-DRILLTHRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+TAP-DRILLTHRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+TAP-DRILLTHRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			 <hw-threaddesc>-6H深<hw-threaddepth>;\
+			 <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+			  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread*
+TAP-DRILLTHRU(ct)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			   <hw-threaddesc>-6H深<hw-threaddepth>
+*with cosmetic thread and nearside csink*
+TAP-DRILLTHRU(ctcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+TAP-DRILLTHRU(cttcsns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+                                          <hw-threaddesc><hw-threadclass>通孔;\
+                                          <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with cosmetic thread and farside csink*
+TAP-DRILLTHRU(ctcsfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			        <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with cosmetic thread and both csinks*
+TAP-DRILLTHRU(ctcsnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+			       <hw-threaddesc>-6H深<hw-threaddepth>;\
+			       <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+				  <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+** 							PIPE TAPPED HOLES 					**
+PTAP-BLIND=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	    <hw-descrp>
+*with nearside csink*
+PTAP-BLIND(csns)=<MOD-DIAM><hw-tapdrldia>深<hw-tapdrldepth>;\
+	          <hw-descrp>;\
+		    <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+PTAP-THRU=<MOD-DIAM><hw-tapdrldia>通孔;\
+	   <hw-descrp>
+*with farside csink*
+PTAP-THRU(csfs)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+*with nearside csink*
+PTAP-THRU(csns)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>
+*with both csinks*
+PTAP-THRU(csnf)=<MOD-DIAM><hw-tapdrldia>通孔;\
+	         <hw-descrp>;\
+		   <hw-msgnearside>锥角<MOD-DIAM><hw-nscsdia>X<hw-nscsang>;\
+		    <hw-msgfarside>锥角<MOD-DIAM><hw-fscsdia>X<hw-fscsang>
+**
+**						COSMETIC THREAD CALLOUTS				**
+MACHINE-THREADS-INTERNAL=<cthrd-size><cthrd-type>            
+MACHINE-THREADS-EXTERNAL=<cthrd-size><cthrd-type>
+STRAIGHT-PIPE-TAPPED-THREAD-INTERNAL=<cthrd-size><cthrd-type>            
+STRAIGHT-PIPE-TAPPED-THREAD-EXTERNAL=<cthrd-size><cthrd-type>            
+**
+*****************************************************************************************************
+**
+*以上 = 右边的每个字符串可以自定义来符合普通文字条目 
+*或合适的异形孔向导变量。一个变量可替代另一变量使用。
+*异形孔向导变量为小写字母，形式为:<hw-type>
+*大写字母项目为 SolidWorks 符号名称，形式为:<MOD-DIA>
+*
+*以上 = 左边的新条目将不被使用。
+*删除以上 = 左边的任何条目可能会引起相关的孔具有空白孔标注。
+*
+*有效的异形孔向导变量如下:
+*VARIABLE		DESCRIPTION*
+*<hw-type>			Type	
+*<hw-std>			Standard	
+*<hw-fsttyp>		Fastener Type	
+*<hw-fstsze>		Fastener Size	
+*		
+*<hw-cbdepth>		Counterbore Depth	
+*<hw-cbdia>		Counterbore Diameter	
+*<hw-cdrlang>		Counterdrill Angle	
+*<hw-cdrldepth>		Counterdrill Depth	
+*<hw-cdrldia>		Counterdrill Diameter	
+*<hw-csang>		Countersink Angle	
+*<hw-csdia>		Countersink Diameter	
+*<hw-depth>		Depth	
+*<hw-diam>		Diameter	
+*<hw-drlang>		Drill Angle	
+*<hw-endcond>		End Condition	
+*<hw-fscsang>		Far Side Countersink Angle	
+*<hw-fscsdia>		Far Side Countersink Diameter	
+*<hw-headclr>		Head Clearance	
+*<hw-holedia>		Hole Diameter	
+*<hw-holedepth>		Hole Depth  
+*<hw-mjrdia>		Major Diameter	
+*<hw-midcsang>		Middle Countersink Angle	
+*<hw-midcsdia>		Middle Countersink Diameter	
+*<hw-minordia>		Minor Diameter	
+*<hw-nscsang>		Near Side Countersink Angle	
+*<hw-nscsdia>		Near Side Countersink Diameter	
+*<hw-tapdrldepth>		Tap Drill Depth	
+*<hw-tapdrldia>		Tap Drill Diameter	
+*<hw-threadang>		Thread Angle
+*<hw-threaddepth>		Thread Depth
+*<hw-threaddesc>		Thread Description
+*<hw-threaddia>		Thread Diameter	
+*<hw-threadclass>	Thread Class (1B, 2B or 3B, applies to Ansi Inch holes only)
+*<hw-threadseries>		Thread Series
+*<hw-threadsize>		Thread Size
+*<hw-thruholedepth>		Thru Hole Depth	
+*<hw-thruholedia>		Thru Hole Diameter	
+*<hw-thrutapdrldp>		Thru Tap Drill Depth	
+*<hw-thrutapdrldia>		Thru Tap Drill Diameter	
+*		
+*<hw-descrp>		Description
+*
+* Cosmetic thread callout variables
+*
+*<cthrd-std>		Standard
+*<cthrd-type>		Type
+*<cthrd-size>		Size
+*<cthrd-major-dia>	Major Diameter
+*<cthrd-minor-dia>	Minor Diameter
+*<cthrd-depth>		Thread Depth

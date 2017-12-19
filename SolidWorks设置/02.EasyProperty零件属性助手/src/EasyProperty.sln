@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyProperty", "EasyProperty\EasyProperty.csproj", "{3CFABEAB-3EE2-4D32-91EA-27767CD82581}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CFABEAB-3EE2-4D32-91EA-27767CD82581}.Debug|AnyCPU.ActiveCfg = Debug|x86
+		{3CFABEAB-3EE2-4D32-91EA-27767CD82581}.Debug|AnyCPU.Build.0 = Debug|x86
+		{3CFABEAB-3EE2-4D32-91EA-27767CD82581}.Release|AnyCPU.ActiveCfg = Release|x86
+		{3CFABEAB-3EE2-4D32-91EA-27767CD82581}.Release|AnyCPU.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

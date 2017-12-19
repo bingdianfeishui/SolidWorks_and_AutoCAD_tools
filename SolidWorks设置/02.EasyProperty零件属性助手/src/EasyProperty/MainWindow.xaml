@@ -1,0 +1,35 @@
+﻿<Window x:Class="EasyProperty.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="属性配置器" Height="340" Width="270" Icon="/EasyProperty;component/EasyProperty.ico" HorizontalAlignment="Center" VerticalAlignment="Bottom" ResizeMode="CanResize" KeyDown="Window_KeyDown" Topmost="True" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    
+    <Grid Width="Auto" Height="310">
+        <Label Content="配置" Height="25" HorizontalAlignment="Left" Margin="7,10,0,0" Name="LableConfig" VerticalAlignment="Top" />
+        <ComboBox Height="25" Margin="50,10,0,0" Name="CboxConfigName" VerticalAlignment="Top" HorizontalAlignment="Left" Width="128" SelectionChanged="cboxConfigName_SelectionChanged" />
+        <Grid Margin="0,41,0,29" Name="Grid1" MinWidth="0" ShowGridLines="True">
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,31,0,0" Name="TextBox1" Text="东方自控编码" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,31,0,0" Name="TextBoxDeaNo" Text="" VerticalAlignment="Top" TextChanged="textBoxDEANo_TextChanged" Foreground="Black"></TextBox>
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,56,0,0" Name="TextBox2" Text="名称" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,56,0,0" Name="TextBoxName" Text="" VerticalAlignment="Top" TextChanged="textBoxName_TextChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,81,0,0" Name="TextBox3" Text="设计者" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,81,0,0" Name="TextBoxDesigner" Text="" VerticalAlignment="Top" TextChanged="textBoxDesigner_TextChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,106,0,0" Name="TextBox4" Text="日期" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,159,0,0" Name="TextBox5" Text="图样代号" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,159,0,0" Name="TextBoxDwgNo" Text="" VerticalAlignment="Top" TextChanged="textBoxDwgNo_TextChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,184,0,0" Name="TextBox6" Text="图样名称" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,184,0,0" Name="TextBoxDwgName" Text="" VerticalAlignment="Top" TextChanged="textBoxDwgName_TextChanged" />
+            <TextBox Height="23" HorizontalAlignment="Left" IsEnabled="False" IsReadOnly="True" Margin="7,209,0,0" Name="TextBox7" Text="备注" VerticalAlignment="Top" Width="90" />
+            <TextBox Height="23" Margin="108,209,0,0" Name="TextBoxNote" VerticalAlignment="Top" TextChanged="textBoxNote_TextChanged" />
+            <Label Content="配置属性" Height="28" HorizontalAlignment="Left" Margin="7,0,0,0" Name="Label1" VerticalAlignment="Top" FontSize="14" Grid.Row="1" />
+            <Label Content="自定义属性" Height="28" HorizontalAlignment="Left" Margin="7,131,0,0" Name="Label2" VerticalAlignment="Top" FontSize="14" />
+            <DatePicker Height="23" Margin="108,106,0,0" Name="DatePickerDesignDate" VerticalAlignment="Top" Text="" SelectedDateChanged="datePickerDesignDate_SelectedDateChanged"></DatePicker>
+            <CheckBox Content="配置/自定义信息相同" Height="16" HorizontalAlignment="Left" Margin="109,136,0,0" Name="CkbSameInfo" VerticalAlignment="Top" IsChecked="True" />
+        </Grid>
+        <Button Content="保存(_S)" Height="25" Margin="185,10,5,0" Name="ButtonSaveInfo" VerticalAlignment="Top" Click="buttonSaveInfo_Click" />
+        <StatusBar Margin="0,0,0,2" Height="25" Name="StatusBar1" VerticalAlignment="Bottom">
+            <TextBlock Name="TextBlock" Foreground="Black" FontSize="12">
+                Status bar
+            </TextBlock>
+        </StatusBar>
+    </Grid>
+</Window>
