@@ -9,14 +9,14 @@
 
 本解决方案分为SolidWoks设置和AutoCAD设置两部分，每部分下有各功能块，方案结构如下：    
 解决方案    
-    |---SolidWoks设置    
-    |   |---01.异型孔标注配置文件修改    
-    |   |---02.EasyProperty零件属性助手    
-    |   |---03.映射文件    
-    |   |---04.批量输出二维图纸    
-    |---AutoCAD设置    
-        |---01.SWDwgOpti优化插件    
-        |---02.DwgFrameAssist图框助手    
+&ensp;&ensp;|---SolidWoks设置    
+&ensp;&ensp;|&ensp;&ensp;|---01.异型孔标注配置文件修改    
+&ensp;&ensp;|&ensp;&ensp;|---02.EasyProperty零件属性助手    
+&ensp;&ensp;|&ensp;&ensp;|---03.映射文件    
+&ensp;&ensp;|&ensp;&ensp;|---04.批量输出二维图纸    
+&ensp;&ensp;|---AutoCAD设置    
+&ensp;&ensp;|&ensp;&ensp;|---01.SWDwgOpti优化插件    
+&ensp;&ensp;|&ensp;&ensp;|---02.DwgFrameAssist图框助手   
 
 >"EasyProperty零件属性助手"和"DwgFrameAssist图框助手"功能块有根据公司内部特殊定制，其余功能为通用功能。    
 
